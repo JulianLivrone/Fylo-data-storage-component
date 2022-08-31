@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://github.com/JulianLivrone/3-column-preview-card-component)
-- Live Site URL: [Live site URL here](https://julianlivrone.github.io/3-column-preview-card-component/)
+- Solution URL: [Solution URL here](https://github.com/JulianLivrone/Fylo-data-storage-component)
+- Live Site URL: [Live site URL here](https://julianlivrone.github.io/Fylo-data-storage-component/)
 
 ## My process
 
