@@ -1,0 +1,255 @@
+/* =================
+   Table of Contents
+
+   1. Global Styles: Global styles for my project.
+
+   2. Layout: Styles related with layout, e.g. header, nav, main, section, footer, div, etc.
+
+   3. Typography: Styles related to text, e.g. h1, h2, p, etc.
+
+   4. Components: Styles related to components, e.g. buttons, etc.
+   ================= */
+
+/* =================
+   1. Global Styles
+   ================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Primary */
+  --gradient-start: hsl(6, 100%, 80%);
+  --gradient-end: hsl(335, 100%, 65%);
+
+  /* Neutral */
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./images/bg-mobile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+/* =================
+   2. Layout
+   ================= */
+
+.container {
+  width: 90%;
+  max-width: 30rem;
+}
+
+.article-icons {
+  background-color: var(--dark-blue);
+  padding: 2em;
+  border-radius: 1em;
+  border-top-right-radius: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.article-storage-info {
+  background-color: var(--dark-blue);
+  margin-top: 1rem;
+  padding: 2em;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  position: relative;
+}
+
+.container-storage-limits {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-space-left {
+  background-color: var(--pale-blue);
+  color: black;
+  width: 50%;
+  padding: 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 79%;
+  left: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* =================
+   3. Typography
+   ================= */
+
+.description {
+  margin-bottom: 1.5em;
+  color: var(--grayish-blue);
+}
+
+.span-GB {
+  color: var(--pale-blue);
+}
+
+.space-left-text {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+}
+
+.space-left-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--very-dark-blue);
+}
+
+/* =================
+   4. Components
+   ================= */
+.progress-bar {
+  width: 100%;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: var(--very-dark-blue);
+  position: relative;
+}
+
+.progress-bar::before {
+  content: '';
+  width: 81.55%;
+  height: 70%;
+  border-radius: 1rem;
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  top: 17%;
+  left: 0.75%;
+}
+
+.progress-bar::after {
+  content: '';
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: white;
+  border-radius: 100000000px;
+  position: absolute;
+  right: 18.25%;
+  top: 21%;
+}
+
+.image-logo {
+  width: 10rem;
+}
+
+.image-icon {
+  margin-top: 2rem;
+  background-color: var(--very-dark-blue);
+  border-radius: 0.5em;
+  display: inline-block;
+  margin-right: 1rem;
+  width: 50px;
+  height: 50px;
+}
+
+.image-icon.image-icon-document {
+  padding: 0.7em;
+}
+
+.image-icon.image-icon-folder {
+  padding: 0.8em;
+}
+
+.image-icon.image-icon-upload {
+  padding: 0.9em;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url('./images/bg-desktop.png');
+    background-color: var(--very-dark-blue);
+    background-position: bottom;
+    background-size: 100vw 50vh;
+  }
+
+  .container {
+    max-width: 70rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+
+  .article-icons {
+    width: 24rem;
+  }
+
+  .article-storage-info {
+    display: grid;
+    width: 36rem;
+    height: 10rem;
+    justify-items: start;
+  }
+
+  .container-space-left {
+    width: 35%;
+    top: -28%;
+    left: 60%;
+  }
+
+  .container-space-left::before {
+    content: '';
+    top: 75%;
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid var(--pale-blue);
+  }
+
+  .space-left-number {
+    font-size: 2.5rem;
+  }
+
+  .space-left-text {
+    font-size: 1rem;
+  }
+
+  .description {
+    margin-bottom: 0.25em;
+  }
+
+  .progress-bar::before {
+    content: '';
+    top: 13%;
+    left: 0.5%;
+  }
+
+  .progress-bar::after {
+    content: '';
+    right: 18.5%;
+    top: 19.5%;
+  }
+}
