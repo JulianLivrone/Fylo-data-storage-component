@@ -53,7 +53,7 @@ body {
   max-width: 30rem;
 }
 
-.article-icons {
+.section-icons {
   background-color: var(--dark-blue);
   padding: 2em;
   border-radius: 1em;
@@ -64,7 +64,7 @@ body {
   align-items: flex-start;
 }
 
-.article-storage-info {
+.section-storage-info {
   background-color: var(--dark-blue);
   margin-top: 1rem;
   padding: 2em;
@@ -101,6 +101,7 @@ body {
    ================= */
 
 .description {
+  font-size: 1rem;
   margin-bottom: 1.5em;
   color: var(--grayish-blue);
 }
@@ -200,11 +201,11 @@ body {
     align-items: flex-end;
   }
 
-  .article-icons {
+  .section-icons {
     width: 24rem;
   }
 
-  .article-storage-info {
+  .section-storage-info {
     display: grid;
     width: 36rem;
     height: 10rem;
